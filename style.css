@@ -1,0 +1,31 @@
+:root {
+    --very-light-gray-blue:hsl(240, 78%, 98%);
+    --light-gray-blue:hsl(234, 14%, 74%);
+    --gray-blue:hsl(233, 13%, 49%);
+    --dark-gray-blue: hsl(232, 13%, 33%);
+
+    --gradient:linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+/* ---------------------------------- RESET --------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+}
