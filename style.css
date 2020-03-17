@@ -203,6 +203,7 @@ ul {
         font-size: 15px;
         background-image: none;
         position: relative;
+        overflow-x: hidden;
     }
 
     body::after {
@@ -211,7 +212,7 @@ ul {
         background-repeat:no-repeat;
         background-position: top right;
         position: absolute;
-        width: 100%;
+        /* width: 100vw; */
         height: 100%;
         top: -30px;
         right: 0;
