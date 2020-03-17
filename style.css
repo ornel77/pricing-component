@@ -220,6 +220,8 @@ ul {
     }
     .cards {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .card {
@@ -228,13 +230,18 @@ ul {
 
     .container {
         max-width: 400px;
+        margin: auto;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 420px) {
 
     .container {
         max-width: 300px;
-        /* margin: auto; */
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
