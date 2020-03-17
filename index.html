@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  
+
   <title>Frontend Mentor | [Challenge Name Here]</title>
 </head>
+
 <body>
   <div class="container">
     <!-- HEADING -->
     <div class="heading">
       <h1>Our Pricing</h1>
-    </div>
-    <div class="toggle-section">
-      <p>Annually</p>
-      <label for="">
-        <input type="checkbox" name="toggle-btn" id="toggle-btn">
-        <span class="slider round"></span>
-      </label>
-      <p>Monthly</p>
+      <div class="toggle-section">
+        <p>Annually</p>
+        <label class="switch">
+          <input type="checkbox" class="input">
+          <span class="slider round"></span>
+        </label>
+        <p>Monthly</p>
+      </div>
     </div>
 
     <!-- CARDS ANNUALLY -->
@@ -61,7 +64,7 @@
     </section>
 
     <!-- CARDS MONTHLY -->
-    <section class="cards annually">
+    <section class="cards monthly">
       <div class="card card-1">
         <p class="category">Basic</p>
         <h2 class="price">&dollar;19.99</h2>
@@ -94,5 +97,8 @@
       </div>
     </section>
   </div>
+
+  <script src="./script.js"></script>
 </body>
+
 </html>

@@ -19,6 +19,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
+    background-image: url("./images/bg-bottom.svg"), url("./images/bg-top.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right top;
+    height: 100vh;
+    background-color: var(--very-light-gray-blue);
+    color: var(--dark-gray-blue);
 }
 
 a {
@@ -28,4 +34,206 @@ a {
 
 ul {
     list-style: none;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin:0px auto;
+}
+
+
+/* --------------------------------- HEADING -------------------------------- */
+.heading {
+    max-width: 300px;
+    text-align: center;
+    width: 100%;
+    margin: 0px auto;
+    padding: 70px 10px 70px 10px ;
+}
+
+.toggle-section {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.toggle-section .switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 30px;
+}
+
+/* Hide default HTML checkbox */
+.toggle-section .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-section .switch .slider {
+    cursor: pointer;
+    position: absolute;
+    background: var(--gradient);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: 0.4s;
+}
+
+.toggle-section .switch .slider::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    bottom: 3.9px;
+    transition: .4s;
+
+}
+
+.toggle-section .switch input:checked + .slider {
+    opacity: 0.7;
+}
+
+.toggle-section .switch input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.toggle-section .switch .slider.round
+{
+    border-radius: 30px;
+}
+
+.toggle-section .switch .slider.round::before {
+    border-radius: 50%;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    CARDS                                   */
+/* -------------------------------------------------------------------------- */
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: auto;
+}
+
+.cards .card {
+    width: 100%;
+    /* height: 500px; */
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cards .card h2 {
+    font-weight: 700;
+    font-size: 3.4rem;
+    margin-top: 20px;
+}
+
+.cards .card ul {
+    font-size: 1rem;
+    margin-top: 25px;
+}
+
+.cards .card ul li {
+    border: 1px solid var(--light-gray-blue);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+}
+
+.cards .card ul li:last-child {
+    border-bottom: 1px solid var(--light-gray-blue);
+}
+.btn {
+    margin: 25px 0;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.cards .card:nth-child(odd) .btn {
+    background: var(--gradient);
+    color: white;
+}
+
+.cards .card:nth-child(odd) .btn:hover {
+    background: #fff;
+    color: var(--dark-gray-blue);
+    border: 1px solid var(--dark-gray-blue);
+}
+
+.cards .card-2 {
+    background: var(--gradient);
+    color: white;
+    z-index: 2;
+}
+
+.cards .card-2 .btn {
+    background-color: white; 
+    color: var(--dark-gray-blue);
+}
+
+.cards .card:nth-child(even) .btn:hover {
+    background: var(--gradient);
+    color: white;
+    border: 1px solid white;
+}
+
+.monthly {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                media queries                               */
+/* -------------------------------------------------------------------------- */
+@media screen and (max-width: 850px) {
+    body {
+        font-size: 15px;
+        background-image: none;
+        position: relative;
+    }
+
+    body::after {
+        content: "";
+        background-image:url("./images/bg-top.svg");
+        background-repeat:no-repeat;
+        background-position: top right;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -30px;
+        right: 0;
+        left: 200px;
+        z-index: -6;
+    }
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 60px;
+    }
+
+    .container {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        max-width: 300px;
+    }
 }
